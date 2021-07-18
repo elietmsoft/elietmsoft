@@ -1,0 +1,23 @@
+{
+  "name": "protokole_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server"
+  },
+  "author": "Elie Tshibangu",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.0",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "sequelize": "^3.30.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
