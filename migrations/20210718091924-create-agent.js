@@ -43,7 +43,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       serviceId: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.INTEGER,
         references:{
           model:'Services',
@@ -51,7 +51,7 @@ module.exports = {
         }
       },
       fonctionId: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.INTEGER,
         references:{
           model:'Fonctions',

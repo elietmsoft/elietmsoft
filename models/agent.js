@@ -20,13 +20,13 @@ module.exports = (sequelize, DataTypes) => {
         // associations can be defined here
         models.Agent.belongsTo(models.Fonction,{
           foreignKey:{
-            allowNull:false
+            allowNull:true
           }
         })
   
         models.Agent.belongsTo(models.Service,{
           foreignKey:{
-            allowNull:false
+            allowNull:true
           }
         })
   

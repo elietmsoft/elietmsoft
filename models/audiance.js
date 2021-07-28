@@ -6,9 +6,9 @@ module.exports = (sequelize, DataTypes) => {
     date: DataTypes.STRING,
     years_again: DataTypes.STRING,
     observation: DataTypes.STRING,
-    autorisation: DataTypes.STRING,
+    autorisation: DataTypes.STRING, //integer niveau de traitement à chaque post
     is_working: DataTypes.BOOLEAN,
-    is_signal: DataTypes.BOOLEAN,
+    is_signal: DataTypes.BOOLEAN,  //signaler si c'est l'urgence
     receiverAgentId: DataTypes.INTEGER,
     senderAgentId: DataTypes.INTEGER,
     correspondantId: DataTypes.INTEGER
