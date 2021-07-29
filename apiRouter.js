@@ -1,10 +1,12 @@
 // Imports
-var express      = require('express');
+var express               = require('express');
 
-var fonctionsCtrl    = require('./routes/fonctionsCtrl');
-var servicesCtrl    = require('./routes/servicesCtrl');
-var agentsCtrl    = require('./routes/agentsCtrl');
+var fonctionsCtrl         = require('./routes/fonctionsCtrl');
+var servicesCtrl          = require('./routes/servicesCtrl');
+var agentsCtrl            = require('./routes/agentsCtrl');
 var correspondantsCtrl    = require('./routes/correspondantsCtrl');
+var piecejointesCtrl      = require('./routes/piecejointesCtrl');
+var audiancesCtrl         = require('./routes/audiancesCtrl');
 
 // Router
 exports.router = (function() {
@@ -37,6 +39,22 @@ exports.router = (function() {
   apiRouter.route('/correspondants/delete/:id').delete(correspondantsCtrl.delete);
   apiRouter.route('/correspondants/').get(correspondantsCtrl.listCorrespondants);
   apiRouter.route('/correspondants/:id').get(correspondantsCtrl.listCorrespondantsById);
+
+  //PieceJointes routes
+  apiRouter.route('/piecejointes/add/').post(piecejointesCtrl.add);
+  apiRouter.route('/piecejointes/update/').put(piecejointesCtrl.update);
+  apiRouter.route('/piecejointes/delete/:id').delete(piecejointesCtrl.delete);
+  apiRouter.route('/piecejointes/').get(piecejointesCtrl.listPieceJointes);
+  apiRouter.route('/piecejointes/:id').get(piecejointesCtrl.listPieceJointesById);
+
+  //Audiances routes
+  apiRouter.route('/audiances/add/').post(audiancesCtrl.add);
+  apiRouter.route('/audiances/update/').put(audiancesCtrl.update);
+  apiRouter.route('/audiances/delete/:id').delete(audiancesCtrl.delete);
+  apiRouter.route('/audiances/').get(audiancesCtrl.listAudiances);
+  apiRouter.route('/audiances/:id').get(audiancesCtrl.listAudiancesById);
+  apiRouter.route('/audiances/:is_working').get(audiancesCtrl.listAudiancesByIsWorking);
+  apiRouter.route('/audiances/:is_signal').get(audiancesCtrl.listAudiancesByIsSignal);
 
   return apiRouter;
 })();
