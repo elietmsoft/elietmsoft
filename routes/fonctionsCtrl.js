@@ -31,6 +31,7 @@ module.exports = {
     },
 
     update:(req,res)=>{
+
       //Params
       var titre = req.body.titre;
       var id    = req.body.id;
@@ -57,6 +58,7 @@ module.exports = {
     },
 
     delete:(req,res)=>{
+
       //Params
       var id    = req.params.id;
 
